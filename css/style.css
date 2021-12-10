@@ -83,7 +83,7 @@ button {
   height: 100%;
 }
 
-.header .header__logo {
+.logo {
   text-decoration: none;
   font-family: Raleway;
   color: var(--title-text-color);
@@ -511,7 +511,7 @@ button {
   margin: 0 auto;
   padding: 60px 0;
 }
-.footer-container {
+.footer__container {
   margin-left: 215px;
   max-width: 231px;
 }
@@ -523,11 +523,11 @@ button {
   line-height: 1.42;
   letter-spacing: 0.03em;
 }
-.footer .adress {
+.footer .footer__adress {
   margin-top: 20px;
   margin-bottom: 9px;
 }
-.adress-link {
+.footer__adress-link {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -537,8 +537,12 @@ button {
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
 }
-.footer-tell,
-.footer-mail {
+.footer .footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+.footer__tell,
+.footer__mail {
   display: inline-block;
   text-decoration: none;
   font-weight: 500;
@@ -547,26 +551,21 @@ button {
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.6);
 }
-.footer .contacts {
-  display: flex;
-  flex-direction: column;
-}
-.footer-tell {
+
+.footer__tell {
   margin-top: 9px;
 }
 .studio-span {
   color: var(--primary-white-color);
 }
-.footer-icon-conteiner {
+.footer__icon-conteiner {
   display: flex;
   align-content: stretch;
   flex-direction: column;
   justify-content: center;
   padding-left: 70px;
 }
-.footer-icon-title {
-  font-family: Roboto;
-  font-style: normal;
+.footer__icon-title {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -575,26 +574,26 @@ button {
   color: var(--primary-white-color);
   margin-bottom: 20px;
 }
-.team-icon-link.footer-link-bg {
+.footer-bg {
   background: rgba(255, 255, 255, 0.1);
 }
-.team-icon-link.footer-link-bg:focus,
+/* .team-icon-link.footer-link-bg:focus,
 .team-icon-link.footer-link-bg:hover {
   background-color: var(--accent-color);
   background-color: var(--bg-hover-button);
   fill: var(--primary-white-color);
   color: var(--primary-white-color);
-}
-.team-icon-link.footer-link-bg:focus .team-icon-svg,
+} */
+/* .team-icon-link.footer-link-bg:focus .team-icon-svg,
 .team-icon-link.footer-link-bg:hover .team-icon-svg {
   fill: var(--primary-white-color);
-}
+} */
 /* --------------------3 div----------- */
-.input-container {
+.footer__input-container {
   padding-left: 93px;
 }
 
-.footer-input-title {
+.footer__input-title {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -603,12 +602,17 @@ button {
   color: var(--primary-white-color);
   margin-top: 12px;
   margin-bottom: 20px;
+  width: 100%;
 }
-.footer-input-container {
+/* .footer__form-container {
+  width: 100%;
+  display: flex;
+} */
+.footer-form {
   display: flex;
 }
 
-.footer-input {
+.footer-form__input {
   width: 358px;
   height: 50px;
   background-color: transparent;
@@ -623,14 +627,14 @@ button {
   padding-left: 16px;
   outline: none;
 }
-.footer-input ::placeholder {
+.footer-form__input ::placeholder {
   font-size: 16px;
   line-height: 1, 25;
   align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.footer-button {
+.footer-form__button {
   width: 200px;
   height: 50px;
   margin-left: 12px;
@@ -650,20 +654,20 @@ button {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-button:focus,
-.footer-button:hover {
+.footer-form__button:focus,
+.footer-form__button:hover {
   background-color: var(--bg-hover-button);
   color: greenyellow;
 }
-.footer-button:focus .footer-button-icon,
-.footer-button:hover .footer-button-icon {
+.footer-form__button:focus .footer-button__icon,
+.footer-form__button:hover .footer-button__icon {
   fill: greenyellow;
 }
-.footer-button-text {
+.footer__button-text {
   margin-right: 10px;
 }
 
-.footer-button-icon {
+.footer__button-icon {
   fill: white;
   margin: 0 auto;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
