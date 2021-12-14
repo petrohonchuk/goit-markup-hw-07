@@ -38,14 +38,12 @@
   display: block;
   margin: 0 auto;
 
-  transition-property: color, background-color, box-shadow, transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
-}
+  transition-property: color, background-color, box-shadow;
+  @include cubic-bezier;
 
-.hero-section .hero-section__button:focus,
-.hero-section .hero-section__button:hover {
-  color: greenyellow;
-  background-color: $bg-hover-button;
+  &:focus,
+  &:hover {
+    color: greenyellow;
+    background-color: $bg-hover-button;
+  }
 }
