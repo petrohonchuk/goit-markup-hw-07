@@ -89,7 +89,6 @@ header {
 
 .header-contacts__mail,
 .header-contacts__tell {
-  display: inline-block;
   text-decoration: none;
   @include font(500, 14px, 1.14, 0.02em);
   font-style: normal;

@@ -333,7 +333,6 @@ header {
 
 .header-contacts__mail,
 .header-contacts__tell {
-  display: inline-block;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
