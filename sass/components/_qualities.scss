@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+  & :last-child {
+    margin-right: 0;
+  }
 }
 .our-qualities__icon-li {
   display: flex;
@@ -16,9 +19,6 @@
 .our-qualities__svg {
   width: 70px;
   height: 70px;
-}
-.our-qualities :last-child {
-  margin-right: 0;
 }
 
 .m-bottom {
@@ -44,15 +44,11 @@
 }
 
 .our-qualities__text-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.4, 0.03em);
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .our-qualities__text {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  @include font(400, 14px, 1.7, 0.03em);
+  color: $primary-text-color;
 }

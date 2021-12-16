@@ -1,5 +1,5 @@
 .teem-section-color {
-  background-color: #f5f4fa;
+  background-color: $team-section-color;
 }
 
 .team {
@@ -20,18 +20,13 @@
   margin-right: 0px;
 }
 .team__name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  @include font(500, 16px, 1.2, 0.03em);
+  color: $title-text-color;
   margin: 30px auto 10px;
 }
 .team__profesion {
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  @include font(400, 16px, 1.2, 0.03em);
+  color: $primary-text-color;
   margin: 0 auto 16px;
 }
 .list-icons {
@@ -55,30 +50,25 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
-
   transition-property: background-color, fill, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
-}
-.list-icons__link:focus,
-.list-icons__link:hover {
-  background-color: var(--bg-hover-button);
-  fill: var(--primary-white-color);
-  color: var(--primary-white-color);
-}
-.list-icons__link:hover .list-icons__svg,
-.list-icons__link:focus .list-icons__svg {
-  fill: var(--primary-white-color);
+  @include cubic-bezier;
+  &:focus,
+  &:hover {
+    background-color: $bg-hover-button;
+    fill: $primary-white-color;
+    color: $primary-white-color;
+  }
 }
 
 .list-icons__svg {
   width: 20px;
   height: 20px;
-  fill: var(--team-icon-color);
+  fill: $team-icon-color;
 
   transition-property: fill, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
+  @include cubic-bezier;
+  .list-icons__link:hover &,
+  .list-icons__link:focus & {
+    fill: $primary-white-color;
+  }
 }
